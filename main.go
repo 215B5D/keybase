@@ -14,7 +14,6 @@ import (
 func main() {
     if len(os.Args) <= 1 {
         fmt.Printf("(keybase) Usage: %s [username]\n", os.Args[0])
-
         return
     }
 
@@ -26,12 +25,14 @@ func main() {
 
     if err != nil {
         fmt.Printf("(keybase) Error: %s", err)
+				return
     }
 
     decoded, err := decode(pgp)
 
     if err != nil {
         fmt.Printf("(keybase) Error: %s", err)
+				return
     }
 
     for _, email := range get_email(decoded) {
