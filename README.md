@@ -2,7 +2,7 @@
 > find keybase emails from their pgp key in cli
 ---
 > ### install
-> visit releases
+> visit releases<br>
 > go build main.go
 ---
 > ### usage
